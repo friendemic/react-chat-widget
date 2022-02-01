@@ -56,10 +56,10 @@ function Messages({ profileAvatar, profileClientAvatar, showTimeStamp }: Props) 
       {messages?.map((message, index) =>
         <div className={`rcw-message ${isClient(message.sender) ? 'rcw-message-client' : ''}`} 
           key={`${index}-${format(message.timestamp, 'hh:mm')}`}>
-          {((profileAvatar && !isClient(message.sender)) || (profileClientAvatar && isClient(message.sender))) &&
+          {((message.agentAvatar && !isClient(message.sender)) || (profileClientAvatar && isClient(message.sender))) &&
             message.showAvatar && 
             <img 
-              src={isClient(message.sender) ? profileClientAvatar : profileAvatar} 
+              src={isClient(message.sender) ? profileClientAvatar : message.agentAvatar} 
               className={`rcw-avatar ${isClient(message.sender) ? 'rcw-avatar-client' : ''}`} 
               alt="profile"
             />

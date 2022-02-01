@@ -12,6 +12,7 @@ export function createNewMessage(
   text: string,
   sender: string,
   id?: string,
+  agentAvatar?: string,
 ): MessageI {
   return {
     type: MESSAGES_TYPES.TEXT,
@@ -20,6 +21,7 @@ export function createNewMessage(
     sender,
     timestamp: new Date(),
     showAvatar: true,
+    agentAvatar,
     customId: id,
     unread: sender === MESSAGE_SENDER.RESPONSE
   };

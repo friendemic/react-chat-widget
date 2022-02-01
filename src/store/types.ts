@@ -9,6 +9,7 @@ type BaseMessage = {
   unread: boolean;
   customId?: string;
   props?: any;
+  agentAvatar?: string;
 }
 
 export interface MessageTypes extends BaseMessage {
