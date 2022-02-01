@@ -8,8 +8,8 @@ export function addUserMessage(text: string, id?: string) {
   store.dispatch(actions.addUserMessage(text, id));
 }
 
-export function addResponseMessage(text: string, id?: string) {
-  store.dispatch(actions.addResponseMessage(text, id));
+export function addResponseMessage(text: string, agentAvatar?: string) {
+  store.dispatch(actions.addResponseMessage(text, agentAvatar));
 }
 
 export function addLinkSnippet(link: LinkParams, id?: string) {

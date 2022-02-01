@@ -23,11 +23,11 @@ export function addUserMessage(text: string, id?: string): actionsTypes.AddUserM
   };
 }
 
-export function addResponseMessage(text: string, id?: string): actionsTypes.AddResponseMessage {
+export function addResponseMessage(text: string, agentAvatar?: string): actionsTypes.AddResponseMessage {
   return {
     type: actionsTypes.ADD_NEW_RESPONSE_MESSAGE,
     text,
-    id
+    agentAvatar
   };
 }
 

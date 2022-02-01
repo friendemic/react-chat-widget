@@ -24,7 +24,7 @@ export default class App extends Component {
   }
 
   handleQuickButtonClicked = (e: any) => {
-    addResponseMessage('Selected ' + e);
+    addResponseMessage('Selected ');
     setQuickButtons([]);
   }
 

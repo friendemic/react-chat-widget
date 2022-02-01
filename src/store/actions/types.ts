@@ -35,7 +35,7 @@ export interface AddUserMessage {
 export interface AddResponseMessage {
   type: typeof ADD_NEW_RESPONSE_MESSAGE;
   text: string;
-  id?: string;
+  agentAvatar?: string;
 }
 
 export interface ToggleMsgLoader {
